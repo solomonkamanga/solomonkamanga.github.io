@@ -170,6 +170,11 @@ footer .links a .links__text {
   letter-spacing: 1px
 }
 
+footer .links img {
+  display: none;
+  width: 22px
+}
+
 @media screen and (max-width:1024px) {
   footer .links a {
     margin: 0 10px
