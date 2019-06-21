@@ -17,8 +17,8 @@ html {
     --dark-grey: #61595d;
 
     /* font stacks */
-    --monospace: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
-    --sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monospace: "Inconsolata", Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    --sans-serif: "Karla", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 ::-moz-selection {
