@@ -6,7 +6,7 @@ Personal website to showcase my portfolio and the skills I have acquired over th
 
 Website: https://www.solomonkamanga.com/
 
-![screenshot of the website](img/metatag-image.png)
+![screenshot of the website](img/meta-tag-image.png)
 
 ## How It's Made
 
