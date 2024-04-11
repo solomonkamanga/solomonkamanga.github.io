@@ -185,32 +185,38 @@ footer .links a:hover:after {
 
 footer .links a .links__text {
 	font-size: 1.5rem;
-	display: inline;
+	display: inline; /* Show text by default */
 	letter-spacing: 1px;
 }
 
+/* Default state: text visible, icons hidden */
 footer .links img {
-	display: none;
-	width: 22px;
+	display: none; /* Hide icons by default */
 }
 
-/* ... media queries for responsive adjustments ... */
+/* Medium screens: Reduce font size and margin */
 @media screen and (max-width: 1024px) {
+	footer .links a .links__text {
+		font-size: 1.25rem;
+	}
+
 	footer .links a {
 		margin: 0 10px;
 	}
 }
 
+/* Smaller screens: Show icons, hide text */
 @media screen and (max-width: 850px) {
 	footer .links a:after {
 		display: none;
 	}
 
 	footer .links a .links__text {
-		display: none;
+		display: none; /* Hide text */
 	}
 
 	footer .links img {
-		display: inline-block;
+		display: inline-block; /* Show icons */
+		width: 30px; /* Adjust icon size */
 	}
 }
