@@ -1,203 +1,216 @@
 /* Basic Styling
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* CSS reset */
-* { 
-  margin: 0; 
-  padding: 0;
+/* CSS reset - Removes default browser styling for uniform appearance across all browsers */
+* {
+	margin: 0;
+	padding: 0;
 }
 
+/* Sets the full height for the body and html elements */
 body,
 html {
-  height: 100%;
+	height: 100%;
 }
 
-/*TODO: Add backward compatibility for older browsers that do not support CSS variables */
+/* Defines color and font variables for easy theme management and consistency across the website */
 :root {
-  /* colors */
-  --blue: #1a2B53;
-  --dark-blue: #01123a;
-  --white: #ffffff;
-  --off-white: #f2ecda;
-  --light-brown: #c59c45;
-  --light-grey: #9c988e;
-  --dark-grey: #61595d;
+	/* colors */
+	--blue: #1a2B53;
+	--dark-blue: #01123a;
+	--white: #ffffff;
+	--off-white: #f2ecda;
+	--light-brown: #c59c45;
+	--light-grey: #9c988e;
+	--dark-grey: #61595d;
 
-  /* font stacks */
-  --monospace: "Inconsolata", Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
-  --sans-serif: "Karla", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/* font stacks */
+	--monospace: "Inconsolata", Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+	--sans-serif: "Karla", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* Highlights text selection with a custom color for better visual feedback */
 ::selection {
-  background: var(--light-brown);
+	background: var(--light-brown);
 }
 
-/* TODO: Warning - Unknown property -> font-smoothing */
+/* Body
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Central alignment and font styling for the entire webpage */
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: var(--white);
-  color: var(--blue);
-  font-family: var(--monospace);
-  font-weight: 400;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: var(--white);
+	color: var(--blue);
+	font-family: var(--monospace);
+	font-weight: 400;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* Container
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Styles for the main content container, including padding and max-width for better content readability */
 .container {
-  padding: 0 20px;
-  max-width: 720px;
-  margin: 0 auto;
+	padding: 0 20px;
+	max-width: 720px;
+	margin: 0 auto;
 }
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Logo styling in the header, centered with max width for responsive design */
 header .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 100%;
-  max-width: 120px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	width: 100%;
+	max-width: 120px;
 }
 
+/* Styles for the main header name, with responsive font size and weight */
 header .name {
-  font-family: var(--sans-serif);
-  font-size: 45px;
-  font-weight: 700;
-  text-align: center;
+	font-family: var(--sans-serif);
+	font-size: 45px;
+	font-weight: 700;
+	text-align: center;
 }
 
 /* Main
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Paragraph styling in the main content section for legibility */
 main p {
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 1.35;
-  text-align: justify;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 1.35;
+	text-align: justify;
 }
 
+/* Styling for highlighted links in the main content, with hover effects for interactivity */
 main .highlight-link {
-  font-weight: 400;
-  color: var(--light-grey);
-  text-decoration: none;
+	font-weight: 400;
+	color: var(--light-grey);
+	text-decoration: none;
 }
 
 main .highlight-link:hover {
-  color: var(--light-brown);
-  border-bottom: 2px solid var(--light-brown);
+	color: var(--light-brown);
+	border-bottom: 2px solid var(--light-brown);
 }
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Flexbox layout for the footer, centering items and adjusting padding for different screen sizes */
 footer {
-  padding: 50px 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center
+	padding: 50px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
-@media screen and (max-width:1024px) {
-  footer {
-    padding: 50px
-  }
+/* ... media queries for responsive adjustments ... */
+@media screen and (max-width: 1024px) {
+	footer {
+		padding: 50px;
+	}
 }
 
-@media screen and (max-width:630px) {
-  footer {
-    display: block
-  }
+@media screen and (max-width: 630px) {
+	footer {
+		display: block;
+	}
 }
 
-@media screen and (max-width:480px) {
-  footer {
-    padding: 50px 30px
-  }
+@media screen and (max-width: 480px) {
+	footer {
+		padding: 50px 30px;
+	}
 }
 
 /* Footer Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Styles for links in the footer, including positioning, font-weight, and interactive states */
 footer .links a {
-  display: inline-block;
-  position: relative;
-  margin: 0 15px;
-  outline: 0;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--blue);
-  text-decoration: none;
+	display: inline-block;
+	position: relative;
+	margin: 0 15px;
+	outline: 0;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	color: var(--blue);
+	text-decoration: none;
 }
 
+/* ... after pseudo-element for underline effect ... */
 footer .links a:after {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: var(--light-brown);
-  content: '';
-  opacity: 0;
-  -webkit-transition: height .3s, opacity .3s, -webkit-transform .3s;
-  transition: height .3s, opacity .3s, -webkit-transform .3s;
-  transition: height .3s, opacity .3s, transform .3s;
-  transition: height .3s, opacity .3s, transform .3s, -webkit-transform .3s;
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px)
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: var(--light-brown);
+	content: '';
+	opacity: 0;
+	-webkit-transition: height .3s, opacity .3s, -webkit-transform .3s;
+	transition: height .3s, opacity .3s, transform .3s, -webkit-transform .3s;
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
 }
 
 footer .links a:focus:after,
 footer .links a:hover:after {
-  height: 2px;
-  border-radius: 3px;
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0)
+	height: 2px;
+	border-radius: 3px;
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
 }
 
 footer .links a .links__text {
-  font-size: 1.5rem;
-  display: inline;
-  letter-spacing: 1px
+	font-size: 1.5rem;
+	display: inline;
+	letter-spacing: 1px;
 }
 
 footer .links img {
-  display: none;
-  width: 22px
+	display: none;
+	width: 22px;
 }
 
-@media screen and (max-width:1024px) {
-  footer .links a {
-    margin: 0 10px
-  }
+/* ... media queries for responsive adjustments ... */
+@media screen and (max-width: 1024px) {
+	footer .links a {
+		margin: 0 10px;
+	}
 }
 
-@media screen and (max-width:850px) {
-  footer .links a:after {
-    display: none
-  }
+@media screen and (max-width: 850px) {
+	footer .links a:after {
+		display: none;
+	}
 
-  footer .links a .links__text {
-    display: none
-  }
-  
-  footer .links img {
-    display: inline-block
-  }
+	footer .links a .links__text {
+		display: none;
+	}
+
+	footer .links img {
+		display: inline-block;
+	}
 }

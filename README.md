@@ -13,6 +13,3 @@ Website: https://www.solomonkamanga.com/
 - HTML
 - CSS
 - JavaScript
-
-<!-- TODO: Add information about the architecture of the website -->
-
